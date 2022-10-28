@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kenankaric.jetpackcomposebasics.R
 import com.kenankaric.jetpackcomposebasics.router.ComposeBasicsRouter
@@ -54,14 +55,21 @@ fun NavigationButton(text: String, screen: Screen) {
     Button(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 16.dp),
+            .padding(8.dp),
         shape = RoundedCornerShape(4.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.purple_500)),
         onClick = { ComposeBasicsRouter.navigateTo(screen) }
     ) {
         Text(
+            modifier = Modifier.padding(8.dp),
             text = text,
             color = Color.White
         )
     }
+}
+
+@Preview
+@Composable
+fun NavigationButtonPreview() {
+    NavigationButton("Button Text", Screen.Text)
 }
