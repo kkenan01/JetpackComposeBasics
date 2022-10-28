@@ -1,7 +1,6 @@
 package com.kenankaric.jetpackcomposebasics.app
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -9,7 +8,6 @@ import com.kenankaric.jetpackcomposebasics.router.ComposeBasicsRouter
 import com.kenankaric.jetpackcomposebasics.router.Screen
 import com.kenankaric.jetpackcomposebasics.screens.*
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ComposeBasicsApp() {
     Surface(color = MaterialTheme.colors.background) {
